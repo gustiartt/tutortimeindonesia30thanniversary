@@ -1,0 +1,33 @@
+# Nuxt
+.nuxt
+.output
+dist
+.data
+.nitro
+.cache
+
+# Node
+node_modules
+
+# Logs
+*.log
+
+# Misc
+.DS_Store
+.fleet
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Vercel
+.vercel
+
+# Claude Code
+.claude
+
+# Large binary assets
+*.mov
+docs/

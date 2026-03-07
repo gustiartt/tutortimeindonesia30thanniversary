@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const isExpanded = ref(false)
-const waLink = 'https://wa.me/6281234567890?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20Tutor%20Time%20Indonesia.'
+const waLink = 'https://wa.me/6281389461648?text=Hello%20Tutor%20Time%20Indonesia%2C%20I%20discovered%20your%2030th%20Anniversary%20landing%20page%20and%20would%20like%20to%20learn%20more%20about%20your%20programs.'
 </script>
 
 <template>

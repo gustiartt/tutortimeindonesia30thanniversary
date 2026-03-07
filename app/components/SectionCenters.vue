@@ -2,13 +2,13 @@
 const { el, isRevealed } = useScrollReveal()
 
 const centers = [
-  { name: 'Kemang', area: 'South Jakarta', since: 1996, badge: 'Pusat Pertama', photo: '/images/centers/kemang-2006.png' },
-  { name: 'Pondok Indah', area: 'South Jakarta', since: 1997, badge: 'Premium Location', photo: '/images/centers/pd-indah-2006.png' },
-  { name: 'Pluit', area: 'North Jakarta', since: 1998, badge: 'North Hub', photo: '/images/centers/pluit-2006.png' },
-  { name: 'Kelapa Gading', area: 'North Jakarta', since: 2000, badge: 'Family Favorite', photo: '/images/centers/kelapa-gading-2006.png' },
-  { name: 'Intercon', area: 'West Jakarta', since: 2002, badge: 'West Side', photo: '/images/centers/intercon-2006.png' },
-  { name: 'Serpong', area: 'South Tangerang', since: 2008, badge: 'BSD Area' },
-  { name: 'Bandung', area: 'West Java', since: 2010, badge: 'City of Flowers', photo: '/images/centers/bandung-2006.png' },
+  { name: 'Kemang', area: 'South Jakarta', since: 1996, photo: '/images/centers/cover fasad kemang.webp', link: 'https://tutortime.co.id/kemang/' },
+  { name: 'Pondok Indah', area: 'South Jakarta', since: 1997, photo: '/images/centers/cover fasad pondok indah.webp', link: 'https://tutortime.co.id/pondok-indah/' },
+  { name: 'Pluit', area: 'North Jakarta', since: 1998, photo: '/images/centers/cover fasad pluit.webp', link: 'https://tutortime.co.id/pluit/' },
+  { name: 'Kelapa Gading', area: 'North Jakarta', since: 2000, photo: '/images/centers/cover fasad bukit kelapa gading.webp', link: 'https://tutortime.co.id/kelapa-gading-bukit/' },
+  { name: 'Intercon', area: 'West Jakarta', since: 2002, photo: '/images/centers/cover fasad intercon.webp', link: 'https://tutortime.co.id/intercon/' },
+  { name: 'Serpong', area: 'South Tangerang', since: 2008, photo: '/images/centers/cover fasad serpong.webp', link: 'https://tutortime.co.id/serpong/' },
+  { name: 'Bandung', area: 'West Java', since: 2010, photo: '/images/centers/cover fasad bandung.webp', link: 'https://tutortime.co.id/bandung/' },
 ]
 </script>
 
@@ -35,26 +35,29 @@ const centers = [
         <div class="flex items-center justify-center gap-3 mt-6">
           <div class="flex items-center gap-2 px-5 py-2.5 bg-white/80 backdrop-blur-sm rounded-full shadow-lg ring-1 ring-sky/20">
             <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-orange to-rose text-white font-zabal font-bold text-lg">7</span>
-            <span class="font-dosis font-semibold text-gray-700">Cabang Aktif</span>
+            <span class="font-dosis font-semibold text-gray-700">Active Branches</span>
           </div>
           <div class="flex items-center gap-2 px-5 py-2.5 bg-white/80 backdrop-blur-sm rounded-full shadow-lg ring-1 ring-sky/20">
             <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-sky to-sky-dark text-white font-zabal font-bold text-lg">30</span>
-            <span class="font-dosis font-semibold text-gray-700">Tahun Pengalaman</span>
+            <span class="font-dosis font-semibold text-gray-700">Years of Experience</span>
           </div>
         </div>
       </div>
 
       <!-- All 7 centers in prominent grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+      <div class="flex flex-wrap justify-center gap-6 max-w-7xl mx-auto">
         <div
           v-for="(center, i) in centers"
           :key="center.name"
-          class="group transition-all duration-500 hover:-translate-y-2"
+          class="group w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] xl:w-[calc(25%-18px)] transition-all duration-500 hover:-translate-y-2"
           :class="isRevealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
           :style="{ transitionDelay: `${i * 100}ms` }"
         >
-          <div
-            class="rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 bg-white ring-1 ring-gray-100"
+          <a
+            :href="center.link"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 bg-white ring-1 ring-gray-100"
             :class="i === 0 ? 'ring-2 ring-orange/30' : ''"
           >
             <!-- Photo -->
@@ -73,16 +76,6 @@ const centers = [
               </div>
               <!-- Gradient overlay -->
               <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-
-              <!-- Badge -->
-              <div class="absolute top-3 left-3">
-                <span
-                  class="inline-block px-3 py-1 rounded-full text-xs font-dosis font-bold backdrop-blur-sm"
-                  :class="i === 0 ? 'bg-orange text-white' : 'bg-white/90 text-gray-700'"
-                >
-                  {{ center.badge }}
-                </span>
-              </div>
 
               <!-- Since badge -->
               <div class="absolute top-3 right-3">
@@ -108,7 +101,7 @@ const centers = [
                 {{ center.area }}
               </p>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>

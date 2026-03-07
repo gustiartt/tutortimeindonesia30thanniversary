@@ -53,7 +53,7 @@ const { el, isRevealed } = useScrollReveal()
           <!-- CTA Buttons -->
           <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://wa.me/6281234567890?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20Tutor%20Time%20Indonesia."
+              href="https://wa.me/6281389461648?text=Hello%20Tutor%20Time%20Indonesia%2C%20I%20discovered%20your%2030th%20Anniversary%20landing%20page%20and%20would%20like%20to%20learn%20more%20about%20your%20programs."
               target="_blank"
               rel="noopener noreferrer"
               class="inline-flex items-center gap-3 bg-green-500 hover:bg-green-400 text-white font-dosis font-bold rounded-full px-8 py-4 text-lg transition-all duration-300 hover:scale-105 shadow-xl"
@@ -89,7 +89,7 @@ const { el, isRevealed } = useScrollReveal()
 
           <div class="flex items-center gap-3">
             <a
-              href="https://www.instagram.com/tutortimeid/"
+              href="https://instagram.com/tutortimeindonesia"
               target="_blank"
               rel="noopener noreferrer"
               class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/25 flex items-center justify-center transition-colors"
@@ -100,7 +100,7 @@ const { el, isRevealed } = useScrollReveal()
               </svg>
             </a>
             <a
-              href="https://www.facebook.com/TutorTimeIndonesia"
+              href="https://facebook.com/TutorTimeID"
               target="_blank"
               rel="noopener noreferrer"
               class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/25 flex items-center justify-center transition-colors"
